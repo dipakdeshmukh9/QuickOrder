@@ -33,3 +33,12 @@ what is cdn link
     const root= ReactDOM.createRoot(document.getElementById("root"));
     root.render(heading);
 </script>
+
+
+
+git init
+git branch -M main
+git add .
+git commit -m "episode-01"
+git remote add origin https://github.com/dips991/zwigato.git
+git push -u origin main
