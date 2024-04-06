@@ -35,6 +35,33 @@ what is cdn link
 </script>
 
 
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const parent = React.createElement("div",{id:"parent"},[
+    React.createElement("div",{id:"child1"},[
+    React.createElement("h1",{},"this is an h1 tag") ,
+    React.createElement("h2",{},"this is an h2 tag")
+    ]
+    ),
+    React.createElement("div",{id:"child2"},[
+    React.createElement("h1",{},"this is an h1 tag") ,
+    React.createElement("h2",{},"this is an h2 tag")
+    ]
+    )]
+);
+console.log(parent);
+
+const root = ReactDOM.createRoot(document.getElementById("header"));
+root.render(parent);
+// Manipulate the HTML DOM using Javscript
+// const heading = document.createElement("h1");
+// heading.innerHTML = "Namaste Everyone";
+// const root = document.getElementById("root");
+// root.appendChild(heading);
+
+// Manipulate the HTML DOM using React
+
 
 git init
 git branch -M main
@@ -81,89 +108,14 @@ remove "main":"App.js" from package.json
   "browserslist":[
     "last 2 versions"
   ]
-  git
-it is a tool used for tracking & manage codebase.
-github
-it is a place where all git repository are hosted.
-git commands
-git init
-git branch -M main
-git remote add origin main ---> local to remote push only once use for setup
-git clone "httpsLink" ---> remote to local fetch
-git add .
-git commit -m "msg"
-git push -u origin main
-git status
-npm - package manager
-npm is package manager that will manage all packages, but funfact it does not stand as a node package manager 😂.
+  episode-3
+ "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  }
+  now we can run command 
+  npm run start / npm start
+  npm run build
 
-npm is repository where all packages hosted over there.
-npm init :- for setup npm & after setup it gives package.json
-package.json :- it is configuration file for npm & it take & tells version of that package which is dependent on our Project.
-bundler : - used for Production Ready purpose
-it is take the whole code and gives bundle of code for production ready which is optimized, removing comments & console, minifying the code & code splitting , chunking & compress file that will do bundler for us.
-
-behind the scene create-react-app has own bundler which is Webpack
-
-bundler ex :-
-webpack
-parcel
-vite
-dependency :-
-sometimes package also know as dependency, beacuse our project is dependent on lot of package/ library.
-
-types of dependency :-
-dev dependency
-
-dependency which required for development only not in production.
-normal dependecy
-
-it dependency required for development & production both.
-node modules :-
-node modules are collection of dependency.
-node modules contains all the code that we fetch from npm.
-it is like database in that all package exist that we need
-
-Transitive dependency :-
-it is dependency dependent on some other dependency and thats has another dependency so lot going on..
-
-Should i put node_modules in git, github, production :-
-big No, thats why we use .gitignore which will ignore the node_modules
-
-note :- node modules are regenerative so dont push on github.
-
-Difference between package.json & package-lock.json :-
-package.json file has note approximate version of dependency
-
-package-lock.json file locking exact version of that dependency
-
-npx :- it will executes package
-parcel is beast :-
-it is bundler that can i used for my project
-
-executing parcel command :-
-npx parcel index.html
-What What are doing Parcel :-
-dev build
-local server
-HMR (Hot Module Replacement) --> Automatic Refresh
-file watching algorithm
-Caching for faster bulds
-image optimization
-minification
-bundling
-compress
-code splitting
-Differential bundling --> Support Older Browsers
-Error Handling
-Tree Shaking --> remove unused code
-different dev & prod bundles
-thats why Parcel is Beast
-Cross Browser Compatibilty :-
-we use browserlist package for issue of different browser compatibilty.
-
-in package.json we just configure browserlist package
-
-  "browserslist": [
-    "last 10 versions"
-  ]
+  jsx transplies 
+  babel convert jsx code to react.createElement 
