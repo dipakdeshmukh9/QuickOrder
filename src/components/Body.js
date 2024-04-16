@@ -47,6 +47,7 @@ if(onlineStatus === false) return(
           <div className="flex items-center">
             <div className="search p-4 m-4 items-center">
                <input type="text" 
+               data-testid ="searchInput" 
                className="border border-solid border-black"
                value={searchText}
                onChange={(e) => {
@@ -66,7 +67,7 @@ if(onlineStatus === false) return(
             <div className="px-4 py-2">
                <button className="px-4 py-2 bg-gray-400 rounded-lg"
             onClick={() => {
-               filteredList= listOfRestaurants.filter(
+              const filteredList= listOfRestaurants.filter(
                   (res) => res.info.avgRating > 4 
                );
                setListOfRestaurant(filteredList);
@@ -87,7 +88,7 @@ if(onlineStatus === false) return(
                 key={restaurant.info.id}
                  to={"restaurants/" +restaurant.info.id}
                  >
-                <RestaurantCard resData={restaurant}/>
+                <RestaurantCard resData={restaurant?.info}/>
                 </Link>
              ))
  
