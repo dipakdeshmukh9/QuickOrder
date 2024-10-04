@@ -1,5 +1,6 @@
-# react-revision
 # Namste-React
+
+## This name clearly indicates an efficient and fast food ordering system 
 
 # Episode-1 : Inception
 
