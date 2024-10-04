@@ -1,4 +1,4 @@
-# Namste-React
+# QuickOrder
 
 ## This name clearly indicates an efficient and fast food ordering system 
 
